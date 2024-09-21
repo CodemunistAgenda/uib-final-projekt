@@ -1,0 +1,315 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #121212;
+}
+.mainpage {
+  width: 100vw;
+  height: 100vh;
+  /* position: relative; */
+}
+#logocircle {
+  border: 1px solid red;
+  position: relative;
+  height: 100vh;
+  /* background: radial-gradient(ellipse at 20% 20%, #e6e6e6 0%, transparent 70%),
+    radial-gradient(ellipse at 60% 20%, #0d0d0d 0%, transparent 70%),
+    radial-gradient(ellipse at 100% 20%, #39ff14 0%, transparent 70%),
+    radial-gradient(ellipse at 100% 100%, #0d98ba 0%, transparent 70%),
+    radial-gradient(ellipse at 20% 100%, #ff073a 0%, transparent 70%); */
+}
+
+.mtglogo:hover {
+  animation: rotateAndExpand 2s infinite linear;
+}
+.mtglogo {
+  box-shadow: goldenrod 30px 30px 50px, goldenrod -30px -30px 50px,
+    goldenrod -30px 30px 50px, goldenrod 30px -30px 50px;
+}
+.circle {
+  width: 500px;
+  height: 500px;
+  border: 5px solid goldenrod;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1 1 30px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: calc(50%);
+  left: calc(50%);
+  transform: translate(-50%, -50%);
+  box-shadow: goldenrod 10px 10px 50px, goldenrod -10px -10px 50px,
+    goldenrod -10px 10px 50px, goldenrod 10px -10px 50px,
+    inset goldenrod 10px 10px 50px, inset goldenrod -10px -10px 50px,
+    goldenrod -10px 10px 50px, inset goldenrod 10px -10px 50px;
+}
+.monogreen {
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  z-index: 1;
+  position: absolute;
+  top: calc(50% - 100px);
+  left: calc(50% + 220px);
+  transform: translate(-50%, -50%);
+  /* box-shadow: goldenrod 20px 20px 10px; */
+  box-shadow: #39ff14 20px 20px 50px, #39ff14 -20px -20px 50px,
+    #39ff14 -20px 20px 50px, #39ff14 20px -20px 50px;
+}
+
+.monoblue {
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  z-index: 1;
+  position: absolute;
+  top: calc(50% + 180px);
+  left: calc(50% + 180px);
+  transform: translate(-50%, -50%);
+  box-shadow: #0d98ba 20px 20px 50px, #0d98ba -20px -20px 50px,
+    #0d98ba -20px 20px 50px, #0d98ba 20px -20px 50px;
+}
+.monoblack {
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  z-index: 1;
+  position: absolute;
+  top: calc(50% - 250px);
+  left: calc(50%);
+  transform: translate(-50%, -50%);
+  box-shadow: #8f00ff 20px 20px 50px, #8f00ff -20px -20px 50px,
+    #8f00ff -20px 20px 50px, #8f00ff 20px -20px 50px;
+}
+.monored {
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  z-index: 1;
+  position: absolute;
+  top: calc(50% + 180px);
+  left: calc(50% - 180px);
+  transform: translate(-50%, -50%);
+  /* box-shadow: #e6e6e6 20px 20px 50px, #e6e6e6 -20px -20px 50px; */
+  box-shadow: #ff073a 20px 20px 50px, #ff073a -20px -20px 50px,
+    #ff073a -20px 20px 50px, #ff073a 20px -20px 50px;
+}
+.monowhite {
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  z-index: 1;
+  position: absolute;
+  top: calc(50% - 100px);
+  left: calc(50% - 220px);
+  transform: translate(-50%, -50%);
+  box-shadow: #e6e6e6 20px 20px 50px, #e6e6e6 -20px -20px 50px,
+    #e6e6e6 -20px 20px 50px, #e6e6e6 20px -20px 50px;
+}
+.colorless {
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  z-index: 1;
+  position: absolute;
+  top: calc(50% + 360px);
+  left: calc(50%);
+  transform: translate(-50%, -50%);
+  box-shadow: #c0c0c0 20px 20px 50px, #c0c0c0 -20px -20px 50px,
+    #c0c0c0 -20px 20px 50px, #c0c0c0 20px -20px 50px;
+}
+.mtglogo {
+  height: 150px;
+  width: 150px;
+  border-radius: 50% 50% 50% 50%;
+}
+.linkedimg > img:hover {
+  animation: rotate 2s infinite linear;
+}
+@keyframes rotateAndExpand {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@media screen and (max-width: 768px) {
+  .circle {
+    width: 250px;
+    height: 250px;
+    border-width: 3px;
+    box-shadow: goldenrod 5px 5px 25px, goldenrod -5px -5px 25px,
+      goldenrod -5px 5px 25px, goldenrod 5px -5px 25px,
+      inset goldenrod 5px 5px 25px, inset goldenrod -5px -5px 25px,
+      goldenrod -5px 5px 25px, inset goldenrod 5px -5px 25px;
+  }
+
+  .mtglogo {
+    height: 75px;
+    width: 75px;
+    box-shadow: goldenrod 15px 15px 25px, goldenrod -15px -15px 25px,
+      goldenrod -15px 15px 25px, goldenrod 15px -15px 25px;
+  }
+
+  .linkedimg > img {
+    height: 50px;
+  }
+
+  .monogreen {
+    top: calc(50% - 50px);
+    left: calc(50% + 110px);
+    box-shadow: #39ff14 10px 10px 25px, #39ff14 -10px -10px 25px,
+      #39ff14 -10px 10px 25px, #39ff14 10px -10px 25px;
+  }
+
+  .monoblue {
+    top: calc(50% + 90px);
+    left: calc(50% + 90px);
+    box-shadow: #0d98ba 10px 10px 25px, #0d98ba -10px -10px 25px,
+      #0d98ba -10px 10px 25px, #0d98ba 10px -10px 25px;
+  }
+
+  .monoblack {
+    top: calc(50% - 125px);
+    left: calc(50%);
+    box-shadow: #8f00ff 10px 10px 25px, #8f00ff -10px -10px 25px,
+      #8f00ff -10px 10px 25px, #8f00ff 10px -10px 25px;
+  }
+
+  .monored {
+    top: calc(50% + 90px);
+    left: calc(50% - 90px);
+    box-shadow: #ff073a 10px 10px 25px, #ff073a -10px -10px 25px,
+      #ff073a -10px 10px 25px, #ff073a 10px -10px 25px;
+  }
+
+  .monowhite {
+    top: calc(50% - 50px);
+    left: calc(50% - 110px);
+    box-shadow: #e6e6e6 10px 10px 25px, #e6e6e6 -10px -10px 25px,
+      #e6e6e6 -10px 10px 25px, #e6e6e6 10px -10px 25px;
+  }
+
+  .colorless {
+    top: calc(50% + 180px);
+    left: calc(50%);
+    box-shadow: #c0c0c0 10px 10px 25px, #c0c0c0 -10px -10px 25px,
+      #c0c0c0 -10px 10px 25px, #c0c0c0 10px -10px 25px;
+  }
+}
+/* container for scrolled page */
+/* Text Container */
+#text-container-black {
+  border: 1px solid red;
+  height: 100%;
+  padding: 20px;
+  background: linear-gradient(180deg, #121212, #8f00ff);
+  color: #fff;
+  text-align: center;
+  margin-top: 20px; /* Space between main content and text container */
+}
+
+#button-container {
+  display: flex;
+  flex-wrap: wrap; /* Enable wrapping */
+  justify-content: center;
+  gap: 10px; /* Spacing between buttons */
+  margin-bottom: 20px;
+}
+
+#button-container a {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #444;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#button-container a:hover {
+  background-color: #666;
+}
+
+/* Hide all text content initially */
+.text-content {
+  display: none;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Display content when its ID is targeted */
+#Monoblack:target,
+#Dimir:target,
+#Golgari:target,
+#Orzhov:target,
+#Rakdos:target,
+#Abzan:target,
+#Esper:target,
+#Grixis:target,
+#Jund:target,
+#Mardu:target,
+#Sultai:target {
+  display: block;
+}
+
+/* Change background color based on target */
+#Monoblack:target {
+  background-color: #f0f8ff;
+}
+#Dimir:target {
+  background-color: #faebd7;
+}
+#Golgari:target {
+  background-color: #7fffd4;
+}
+#Orzhov:target {
+  background-color: #ffb6c1;
+}
+#Rakdos:target {
+  background-color: #ffa07a;
+}
+#Abzan:target {
+  background-color: #20b2aa;
+}
+#Esper:target {
+  background-color: #d3d3d3;
+}
+#Grixis:target {
+  background-color: #ffebcd;
+}
+#Jund:target {
+  background-color: #e0ffff;
+}
+#Mardu:target {
+  background-color: #ffe4e1;
+}
+#Sultai:target {
+  background-color: #f0ffff;
+}
