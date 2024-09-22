@@ -284,32 +284,126 @@ main {
   background-color: #f0f8ff;
 }
 #Dimir:target {
-  background-color: #faebd7;
+  background: linear-gradient(135deg, rgba(128,0,128,1) 0%, rgba(0,0,255,1) 100%);
+  box-shadow: 0px 0px 20px 5px rgba(128, 0, 128, 0.7), 0px 0px 20px 5px rgba(0, 0, 255, 0.7);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
 }
 #Golgari:target {
-  background-color: #7fffd4;
+  background: linear-gradient(135deg, rgba(0, 255, 0, 1) 0%, rgba(128, 0, 128, 1) 100%);
+    box-shadow: 0px 0px 20px 5px rgba(0, 255, 0, 0.7), 0px 0px 20px 5px rgba(128, 0, 128, 0.7);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
 }
 #Orzhov:target {
-  background-color: #ffb6c1;
+  /* Neon White-to-Black Gradient */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.7), 0px 0px 20px 5px rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
 }
+
+
 #Rakdos:target {
-  background-color: #ffa07a;
+  background: linear-gradient(135deg, rgba(255, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  box-shadow: 0px 0px 20px 5px rgba(255, 0, 0, 0.7), 0px 0px 20px 5px rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
 }
 #Abzan:target {
-  background-color: #20b2aa;
+  background: radial-gradient(circle, 
+  rgba(0, 0, 0, 1) 33%,         /* Black in the center */
+  rgba(0, 128, 0, 1) 66%,       /* Green in the middle */
+  rgba(255, 255, 255, 1) 100%); /* White on the outer edge */
+box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5), 
+          0px 0px 20px 5px rgba(0, 128, 0, 0.5), 
+          0px 0px 20px 5px rgba(255, 255, 255, 0.5);
+color: white;
+padding: 20px;
+border-radius: 10px;
+text-align: center;    background: radial-gradient(circle, 
+rgba(0, 0, 0, 1) 33%,         /* Black in the center */
+rgba(0, 128, 0, 1) 66%,       /* Green in the middle */
+rgba(255, 255, 255, 1) 100%); /* White on the outer edge */
+box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5), 
+        0px 0px 20px 5px rgba(0, 128, 0, 0.5), 
+        0px 0px 20px 5px rgba(255, 255, 255, 0.5);
+color: white;
+padding: 20px;
+border-radius: 10px;
+text-align: center;
 }
+
 #Esper:target {
-  background-color: #d3d3d3;
+  background: radial-gradient(circle, 
+  rgba(0, 0, 0, 1) 33%,         /* Black in the center */
+  rgba(0, 0, 255, 1) 66%,       /* Blue in the middle */
+  rgba(255, 255, 255, 1) 100%); /* White on the outer edge */
+box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5), 
+          0px 0px 20px 5px rgba(0, 0, 255, 0.5), 
+          0px 0px 20px 5px rgba(255, 255, 255, 0.5);
+color: white;
+padding: 20px;
+border-radius: 10px;
+text-align: center;
 }
 #Grixis:target {
-  background-color: #ffebcd;
+  background: radial-gradient(circle, 
+  rgba(0, 0, 0, 1) 33%,        /* Black in the center */
+  rgba(0, 0, 255, 1) 66%,      /* Blue in the middle */
+  rgba(255, 0, 0, 1) 100%);    /* Red on the outer edge */
+box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5), 
+          0px 0px 20px 5px rgba(0, 0, 255, 0.5), 
+          0px 0px 20px 5px rgba(255, 0, 0, 0.5);
+color: white;
+padding: 20px;
+border-radius: 10px;
+text-align: center;
 }
 #Jund:target {
-  background-color: #e0ffff;
+  background: radial-gradient(circle, 
+  rgba(0, 0, 0, 1) 33%,         /* Black in the center */
+  rgba(255, 0, 0, 1) 66%,       /* Red in the middle */
+  rgba(0, 128, 0, 1) 100%);     /* Green on the outer edge */
+box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5), 
+          0px 0px 20px 5px rgba(255, 0, 0, 0.5), 
+          0px 0px 20px 5px rgba(0, 128, 0, 0.5);
+color: white;
+padding: 20px;
+border-radius: 10px;
+text-align: center;
 }
 #Mardu:target {
-  background-color: #ffe4e1;
+  background: radial-gradient(circle, 
+  rgba(0, 0, 0, 1) 33%,        /* Black in the center */
+  rgba(255, 0, 0, 1) 66%,      /* Red in the middle */
+  rgba(255, 255, 255, 1) 100%);/* White on the outer edge */
+box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5), 
+          0px 0px 20px 5px rgba(255, 0, 0, 0.5), 
+          0px 0px 20px 5px rgba(255, 255, 255, 0.5);
+color: white;
+padding: 20px;
+border-radius: 10px;
+text-align: center;
 }
 #Sultai:target {
-  background-color: #f0ffff;
+  background: radial-gradient(circle, 
+  rgba(0, 0, 0, 1) 33%,        /* Black in the center */
+  rgba(0, 0, 255, 1) 66%,      /* Blue in the middle */
+  rgba(0, 128, 0, 1) 100%);    /* Green on the outer edge */
+box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5), 
+          0px 0px 20px 5px rgba(0, 0, 255, 0.5), 
+          0px 0px 20px 5px rgba(0, 128, 0, 0.5);
+color: white;
+padding: 20px;
+border-radius: 10px;
+text-align: center;
 }
