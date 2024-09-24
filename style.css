@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
+.uncial-antiqua-regular {
+  font-family: "Uncial Antiqua", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
 * {
   padding: 0;
   margin: 0;
@@ -10,11 +16,35 @@ main {
   align-items: center;
   height: 100%;
   background-color: #121212;
+  font-family: "Uncial Antiqua",sans-serif;
 }
 .mainpage {
   width: 100vw;
   height: 100vh;
   /* position: relative; */
+}
+.toggle-checkbox {
+  display: none;
+}
+
+.toggle-label {
+  display: block;
+  width: 300px;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #ff4500;
+  color: white;
+  text-align: center;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.toggle-label:hover {
+  background-color: #ff6347;
+  box-shadow: 0px 0px 25px rgba(255, 99, 71, 0.9);
 }
 #logocircle {
   border: 1px solid red;
@@ -168,7 +198,9 @@ main {
       inset goldenrod 5px 5px 25px, inset goldenrod -5px -5px 25px,
       goldenrod -5px 5px 25px, inset goldenrod 5px -5px 25px;
   }
-
+  #desktop-color-section {
+    display: none;
+  }
   .mtglogo {
     height: 75px;
     width: 75px;
@@ -222,188 +254,731 @@ main {
       #c0c0c0 -10px 10px 25px, #c0c0c0 10px -10px 25px;
   }
 }
-/* container for scrolled page */
-/* Text Container */
-#text-container-black {
-  border: 1px solid red;
-  height: 100%;
+/* Hidden Radio Buttons */
+input[type="radio"] {
+  display: none;
+}
+
+/* General container for text display */
+#text-display {
+  max-height: 100vh; /* Make sure text area doesn't exceed 60% of the screen height */
+  overflow-y: auto; /* Allow scrolling within the text display */
   padding: 20px;
-  background: linear-gradient(180deg, #121212, #8f00ff);
-  color: #fff;
+  border-radius: 10px;
   text-align: center;
-  margin-top: 20px; /* Space between main content and text container */
+  font-size: 1.2em;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-#button-container {
+/* Each section takes up full viewport height */
+section {
+  height: 100vh; /* Full viewport height */
   display: flex;
-  flex-wrap: wrap; /* Enable wrapping */
+  flex-direction: column;
   justify-content: center;
-  gap: 10px; /* Spacing between buttons */
-  margin-bottom: 20px;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
 }
 
-#button-container a {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #444;
-  color: #fff;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#button-container a:hover {
-  background-color: #666;
-}
-
-/* Hide all text content initially */
+/* Make the text content fill the available space and scroll if necessary */
 .text-content {
   display: none;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
+  color: #fff;
+  border: 2px solid transparent;
+  animation: animatedBorderDiv 4s infinite alternate;
+  text-align: center;
 }
 
-/* Display content when its ID is targeted */
-#Monoblack:target,
-#Dimir:target,
-#Golgari:target,
-#Orzhov:target,
-#Rakdos:target,
-#Abzan:target,
-#Esper:target,
-#Grixis:target,
-#Jund:target,
-#Mardu:target,
-#Sultai:target {
+/* Show text when its ID is targeted */
+.text-content:target {
+  display: block;
+  margin: auto;
+  max-width: 80%;
+  text-align: center;
+}
+/* Back to top button */
+.back-to-top {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: inline-block;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.back-to-top img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+.back-to-top img:hover {
+  transform: scale(1.2);
+}
+/* Animation for border around text-content divs */
+@keyframes animatedBorderDiv {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ffffff;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+
+/* Section container colors */
+#black-section {
+  background: linear-gradient(135deg, #000000, #434343);
+  color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100vw;
+}
+
+#green-section {
+  background: linear-gradient(135deg, #32cd32, #228b22);
+  color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100vw;
+}
+
+#blue-section {
+  background: linear-gradient(135deg, #1e90ff, #0000ff);
+  color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100vw;
+}
+
+#red-section {
+  background: linear-gradient(135deg, #ff4500, #ff6347);
+  color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100vw;
+}
+
+#white-section {
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  color: #000000;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100vw;
+}
+#colorless-section {
+  background: linear-gradient(135deg, #c0c0c0, #e0e0e0);
+  color: #333333;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100vw;
+}
+#formats-section {
+  background: linear-gradient(135deg, #1e90ff, #077e1b);
+  color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100vw;
+}
+
+/* General Button Styles */
+.btn {
+  padding: 10px 15px;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  color: #ffffff; /* Default white text */
+  display: inline-block;
+  margin: 5px;
+  cursor: pointer;
+  background-size: 200%;
+  border: 2px solid transparent;
+  animation: animatedBorder 3s infinite alternate;
+}
+
+/* Hover Effect for Buttons */
+.btn:hover {
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7);
+}
+
+/* Border Animation */
+@keyframes animatedBorder {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ffffff;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+/* Colorless section styling */
+.colorless-bg {
+  background-color: #c0c0c0; /* Silver background */
+  color: #333333; /* Dark text for contrast */
+  border: 2px solid #d4af37; /* Gold border */
+  box-shadow: 0px 0px 15px 5px #d4af37;
+}
+.colorless-btn {
+  background: linear-gradient(135deg, #c0c0c0, #e0e0e0);
+  color: #333333;
+  border: 2px solid #d4af37;
+}
+.colorless-btn:hover {
+  background: linear-gradient(135deg, #d4af37, #e0e0e0);
+  color: #333333;
+  box-shadow: 0px 0px 15px 5px #d4af37;
+}
+
+/* Mono-color buttons */
+.monoblack-btn {
+  background: linear-gradient(135deg, #121212, #000000);
+}
+
+.monogreen-btn {
+  background: linear-gradient(135deg, #32cd32, #006400);
+}
+
+.monoblue-btn {
+  background: linear-gradient(135deg, #1e90ff, #0000ff);
+}
+
+.monored-btn {
+  background: linear-gradient(135deg, #ff4500, #ff0000);
+}
+
+.monowhite-btn {
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  color: #000000; /* Black text for better contrast */
+}
+
+/* Missing Two-Color and Three-Color Identity Buttons */
+
+/* Dimir: Blue and Black */
+.dimir-btn {
+  background: linear-gradient(135deg, #1e90ff, #000000);
+  border: 2px solid #000000;
+}
+
+.dimir-btn:hover {
+  background: linear-gradient(135deg, #4682b4, #000000);
+}
+
+/* Abzan: Green, White, and Black */
+.abzan-btn {
+  background: linear-gradient(135deg, #32cd32, #ffffff, #000000);
+  border: 2px solid #32cd32;
+  color: #000000;
+}
+
+.abzan-btn:hover {
+  background: linear-gradient(135deg, #228b22, #f0f0f0, #000000);
+  color: #000000; /* Change text to black for better contrast */
+}
+
+/* Gruul: Red and Green */
+.gruul-btn {
+  background: linear-gradient(135deg, #ff4500, #32cd32);
+  border: 2px solid #ff4500;
+}
+
+.gruul-btn:hover {
+  background: linear-gradient(135deg, #ff6347, #228b22);
+}
+
+/* Two-Color and Three-Color Identity Buttons (Existing) */
+.selesnya-btn {
+  background: linear-gradient(135deg, #32cd32, #ffffff);
+  color: #000000; /* Black text */
+}
+
+.simic-btn {
+  background: linear-gradient(135deg, #32cd32, #1e90ff);
+}
+
+.azorius-btn {
+  background: linear-gradient(135deg, #1e90ff, #ffffff);
+  color: #000000; /* Black text */
+}
+
+.izzet-btn {
+  background: linear-gradient(135deg, #1e90ff, #ff4500);
+}
+
+.golgari-btn {
+  background: linear-gradient(135deg, #32cd32, #000000);
+}
+
+.rakdos-btn {
+  background: linear-gradient(135deg, #000000, #ff4500);
+}
+
+.boros-btn {
+  background: linear-gradient(135deg, #ff4500, #ffffff);
+  color: #000000; /* Black text */
+}
+
+.orzhov-btn {
+  background: linear-gradient(135deg, #ffffff, #000000);
+  color: #000000; /* Black text */
+}
+
+.esper-btn {
+  background: linear-gradient(135deg, #ffffff, #1e90ff, #000000);
+  color: #000000; /* Black text */
+}
+
+.grixis-btn {
+  background: linear-gradient(135deg, #000000, #1e90ff, #ff4500);
+}
+
+.jund-btn {
+  background: linear-gradient(135deg, #32cd32, #ff4500, #000000);
+}
+
+.mardu-btn {
+  background: linear-gradient(135deg, #ff4500, #ffffff, #000000);
+  color: #000000; /* Black text */
+}
+
+.sultai-btn {
+  background: linear-gradient(135deg, #32cd32, #1e90ff, #000000);
+}
+
+/* Color-specific text content backgrounds */
+.black-bg {
+  background-color: #121212;
+}
+
+.green-bg {
+  background-color: #228b22;
+}
+
+.blue-bg {
+  background-color: #1e90ff;
+}
+
+.red-bg {
+  background-color: #ff4500;
+}
+
+.white-bg {
+  background-color: #f0f0f0;
+  color: #000000; /* Black text for contrast */
+}
+
+.selesnya-bg {
+  background: linear-gradient(135deg, #32cd32, #ffffff);
+  color: #000000;
+}
+
+.simic-bg {
+  background: linear-gradient(135deg, #32cd32, #1e90ff);
+}
+
+.gruul-bg {
+  background: linear-gradient(135deg, #ff4500, #32cd32);
+}
+
+.golgari-bg {
+  background: linear-gradient(135deg, #32cd32, #000000);
+}
+
+.rakdos-bg {
+  background: linear-gradient(135deg, #000000, #ff4500);
+}
+
+.boros-bg {
+  background: linear-gradient(135deg, #ff4500, #ffffff);
+  color: #000000;
+}
+
+.orzhov-bg {
+  background: linear-gradient(135deg, #ffffff, #000000);
+  color: #000000;
+}
+.abzan-bg {
+  background: linear-gradient(135deg, #228b22, #f0f0f0, #121212);
+  color: #000000;
+}
+/* Green, White, and Black gradient */
+.dimir-bg {
+  background: linear-gradient(135deg, #1e90ff, #000000);
+}
+
+.azorius-bg {
+  background: linear-gradient(135deg, #1e90ff, #ffffff);
+  color: #000000;
+}
+
+.izzet-bg {
+  background: linear-gradient(135deg, #1e90ff, #ff4500);
+}
+
+/* Button container styling */
+#button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+/* Play Formats Section Backgrounds */
+.standard-bg {
+  background-color: #1e90ff; /* Blue for Standard */
+  color: #ffffff;
+}
+
+.modern-bg {
+  background-color: #228b22; /* Green for Modern */
+  color: #ffffff;
+}
+
+.commander-bg {
+  background-color: #ff4500; /* Red for Commander */
+  color: #ffffff;
+}
+
+.pioneer-bg {
+  background-color: #9370db; /* Purple for Pioneer */
+  color: #ffffff;
+}
+
+.legacy-bg {
+  background-color: #000000; /* Black for Legacy */
+  color: #ffffff;
+}
+
+/* Button Styles for Play Formats */
+.standard-btn {
+  background: linear-gradient(135deg, #1e90ff, #4682b4);
+}
+
+.modern-btn {
+  background: linear-gradient(135deg, #228b22, #32cd32);
+}
+
+.commander-btn {
+  background: linear-gradient(135deg, #ff4500, #ff6347);
+}
+
+.pioneer-btn {
+  background: linear-gradient(135deg, #9370db, #ba55d3);
+}
+
+.legacy-btn {
+  background: linear-gradient(135deg, #000000, #434343);
+}
+@media screen and (min-width: 768px) {
+  section {
+    display: none;
+  }
+}
+#display-color-section {
   display: block;
 }
-
-/* Change background color based on target */
-#Monoblack:target {
-  background-color: #f0f8ff;
-}
-#Dimir:target {
-  background: linear-gradient(135deg, rgba(128,0,128,1) 0%, rgba(0,0,255,1) 100%);
-  box-shadow: 0px 0px 20px 5px rgba(128, 0, 128, 0.7), 0px 0px 20px 5px rgba(0, 0, 255, 0.7);
+.toggle-label {
+  display: block;
+  width: 300px;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #ff4500;
   color: white;
-  padding: 20px;
-  border-radius: 10px;
   text-align: center;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
-#Golgari:target {
-  background: linear-gradient(135deg, rgba(0, 255, 0, 1) 0%, rgba(128, 0, 128, 1) 100%);
-    box-shadow: 0px 0px 20px 5px rgba(0, 255, 0, 0.7), 0px 0px 20px 5px rgba(128, 0, 128, 0.7);
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
+.toggle-label:hover {
+  background-color: #ff6347;
+  box-shadow: 0px 0px 25px rgba(255, 99, 71, 0.9);
 }
-#Orzhov:target {
-  /* Neon White-to-Black Gradient */
-  background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 100%);
-  box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.7), 0px 0px 20px 5px rgba(0, 0, 0, 0.7);
+* Color identity section hidden by default */ #desktop-color-section {
+  position: fixed;
+  top: 0;
+  left: -100vw; /* Start off-screen */
+  width: 100vw;
+  height: 100vh;
+  background-color: #121212;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: left 0.5s ease-in-out;
+}
+
+/* Slide in color section when the toggle checkbox is checked */
+.toggle-checkbox:checked ~ #desktop-color-section {
+  left: 0;
+}
+
+.desktop-container {
+  width: 100vw;
+  background-color: #1e1e1e;
+  padding: 20px;
+}
+
+.color-identity-list {
+  list-style: none;
+  padding: 0;
+}
+
+.color-identity-list li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* Hide all the checkboxes inside the list items */
+.color-checkbox {
+  display: none;
+}
+
+.color-btn {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  width: 50%;
+  text-align: left;
+}
+
+.color-btn:hover {
+  background-color: #555;
+}
+
+/* Hide the text content initially */
+.desktop-text-content {
+  display: none;
+  position: relative;
+  left: 0;
+  width: 300px;
+  margin-left: 20px;
+  padding: 15px;
   color: white;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
+  border-radius: 8px;
+  transition: left 0.5s ease;
 }
 
-
-#Rakdos:target {
-  background: linear-gradient(135deg, rgba(255, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
-  box-shadow: 0px 0px 20px 5px rgba(255, 0, 0, 0.7), 0px 0px 20px 5px rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
+/* Show text content when the corresponding checkbox is checked */
+.color-checkbox:checked + .color-btn + .desktop-text-content {
+  display: block;
 }
-#Abzan:target {
-  background: radial-gradient(circle, 
-  rgba(0, 0, 0, 1) 33%,         /* Black in the center */
-  rgba(0, 128, 0, 1) 66%,       /* Green in the middle */
-  rgba(255, 255, 255, 1) 100%); /* White on the outer edge */
-box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5), 
-          0px 0px 20px 5px rgba(0, 128, 0, 0.5), 
-          0px 0px 20px 5px rgba(255, 255, 255, 0.5);
-color: white;
-padding: 20px;
-border-radius: 10px;
-text-align: center;    background: radial-gradient(circle, 
-rgba(0, 0, 0, 1) 33%,         /* Black in the center */
-rgba(0, 128, 0, 1) 66%,       /* Green in the middle */
-rgba(255, 255, 255, 1) 100%); /* White on the outer edge */
-box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5), 
-        0px 0px 20px 5px rgba(0, 128, 0, 0.5), 
-        0px 0px 20px 5px rgba(255, 255, 255, 0.5);
-color: white;
-padding: 20px;
-border-radius: 10px;
-text-align: center;
+/* Mono-color labels and content */
+#color-Monoblack + .color-btn,
+#desktop-Monoblack {
+  background-color: #121212; /* Black */
+  color: #f0f0f0; /* Light text */
 }
 
-#Esper:target {
-  background: radial-gradient(circle, 
-  rgba(0, 0, 0, 1) 33%,         /* Black in the center */
-  rgba(0, 0, 255, 1) 66%,       /* Blue in the middle */
-  rgba(255, 255, 255, 1) 100%); /* White on the outer edge */
-box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5), 
-          0px 0px 20px 5px rgba(0, 0, 255, 0.5), 
-          0px 0px 20px 5px rgba(255, 255, 255, 0.5);
-color: white;
-padding: 20px;
-border-radius: 10px;
-text-align: center;
+#color-Monogreen + .color-btn,
+#desktop-Monogreen {
+  background-color: #228b22; /* Green */
+  color: #ffffff; /* White text */
 }
-#Grixis:target {
-  background: radial-gradient(circle, 
-  rgba(0, 0, 0, 1) 33%,        /* Black in the center */
-  rgba(0, 0, 255, 1) 66%,      /* Blue in the middle */
-  rgba(255, 0, 0, 1) 100%);    /* Red on the outer edge */
-box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5), 
-          0px 0px 20px 5px rgba(0, 0, 255, 0.5), 
-          0px 0px 20px 5px rgba(255, 0, 0, 0.5);
-color: white;
-padding: 20px;
-border-radius: 10px;
-text-align: center;
+
+#color-Monoblue + .color-btn,
+#desktop-Monoblue {
+  background-color: #1e90ff; /* Blue */
+  color: #ffffff; /* White text */
 }
-#Jund:target {
-  background: radial-gradient(circle, 
-  rgba(0, 0, 0, 1) 33%,         /* Black in the center */
-  rgba(255, 0, 0, 1) 66%,       /* Red in the middle */
-  rgba(0, 128, 0, 1) 100%);     /* Green on the outer edge */
-box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5), 
-          0px 0px 20px 5px rgba(255, 0, 0, 0.5), 
-          0px 0px 20px 5px rgba(0, 128, 0, 0.5);
-color: white;
-padding: 20px;
-border-radius: 10px;
-text-align: center;
+
+#color-Monored + .color-btn,
+#desktop-Monored {
+  background-color: #ff4500; /* Red */
+  color: #ffffff; /* White text */
 }
-#Mardu:target {
-  background: radial-gradient(circle, 
-  rgba(0, 0, 0, 1) 33%,        /* Black in the center */
-  rgba(255, 0, 0, 1) 66%,      /* Red in the middle */
-  rgba(255, 255, 255, 1) 100%);/* White on the outer edge */
-box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5), 
-          0px 0px 20px 5px rgba(255, 0, 0, 0.5), 
-          0px 0px 20px 5px rgba(255, 255, 255, 0.5);
-color: white;
-padding: 20px;
-border-radius: 10px;
-text-align: center;
+
+#color-Monowhite + .color-btn,
+#desktop-Monowhite {
+  background-color: #f0f0f0; /* White */
+  color: #121212; /* Dark text */
 }
-#Sultai:target {
-  background: radial-gradient(circle, 
-  rgba(0, 0, 0, 1) 33%,        /* Black in the center */
-  rgba(0, 0, 255, 1) 66%,      /* Blue in the middle */
-  rgba(0, 128, 0, 1) 100%);    /* Green on the outer edge */
-box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5), 
-          0px 0px 20px 5px rgba(0, 0, 255, 0.5), 
-          0px 0px 20px 5px rgba(0, 128, 0, 0.5);
-color: white;
-padding: 20px;
-border-radius: 10px;
-text-align: center;
+
+/* Two-color identity labels and content */
+#color-Dimir + .color-btn,
+#desktop-Dimir {
+  background: linear-gradient(135deg, #1e90ff, #121212); /* Blue and Black */
+  color: #f0f0f0; /* Light text */
+}
+
+#color-Golgari + .color-btn,
+#desktop-Golgari {
+  background: linear-gradient(135deg, #228b22, #121212); /* Black and Green */
+  color: #ffffff; /* White text */
+}
+
+#color-Orzhov + .color-btn,
+#desktop-Orzhov {
+  background: linear-gradient(135deg, #f0f0f0, #121212); /* Black and White */
+  color: #121212; /* Dark text */
+}
+
+#color-Rakdos + .color-btn,
+#desktop-Rakdos {
+  background: linear-gradient(135deg, #ff4500, #121212); /* Black and Red */
+  color: #ffffff; /* White text */
+}
+
+#color-Selesnya + .color-btn,
+#desktop-Selesnya {
+  background: linear-gradient(135deg, #228b22, #f0f0f0); /* Green and White */
+  color: #121212; /* Dark text */
+}
+
+#color-Simic + .color-btn,
+#desktop-Simic {
+  background: linear-gradient(135deg, #228b22, #1e90ff); /* Green and Blue */
+  color: #ffffff; /* White text */
+}
+
+#color-Gruul + .color-btn,
+#desktop-Gruul {
+  background: linear-gradient(135deg, #ff4500, #228b22); /* Red and Green */
+  color: #ffffff; /* White text */
+}
+
+#color-Azorius + .color-btn,
+#desktop-Azorius {
+  background: linear-gradient(135deg, #f0f0f0, #1e90ff); /* White and Blue */
+  color: #121212; /* Dark text */
+}
+
+#color-Izzet + .color-btn,
+#desktop-Izzet {
+  background: linear-gradient(135deg, #1e90ff, #ff4500); /* Blue and Red */
+  color: #ffffff; /* White text */
+}
+
+#color-Boros + .color-btn,
+#desktop-Boros {
+  background: linear-gradient(135deg, #ff4500, #f0f0f0); /* Red and White */
+  color: #121212; /* Dark text */
+}
+
+/* Three-color identity labels and content */
+#color-Abzan + .color-btn,
+#desktop-Abzan {
+  background: linear-gradient(
+    135deg,
+    #121212,
+    #228b22,
+    #f0f0f0
+  ); /* Black, Green, and White */
+  color: #ffffff; /* White text */
+}
+
+#color-Esper + .color-btn,
+#desktop-Esper {
+  background: linear-gradient(
+    135deg,
+    #f0f0f0,
+    #1e90ff,
+    #121212
+  ); /* White, Blue, and Black */
+  color: #121212; /* Dark text */
+}
+
+#color-Jund + .color-btn,
+#desktop-Jund {
+  background: linear-gradient(
+    135deg,
+    #121212,
+    #ff4500,
+    #228b22
+  ); /* Black, Red, and Green */
+  color: #ffffff; /* White text */
+}
+
+#color-Mardu + .color-btn,
+#desktop-Mardu {
+  background: linear-gradient(
+    135deg,
+    #ff4500,
+    #f0f0f0,
+    #121212
+  ); /* Red, White, and Black */
+  color: #121212; /* Dark text */
+}
+
+#color-Sultai + .color-btn,
+#desktop-Sultai {
+  background: linear-gradient(
+    135deg,
+    #121212,
+    #1e90ff,
+    #228b22
+  ); /* Black, Blue, and Green */
+  color: #ffffff; /* White text */
+}
+
+/* Optional additional three-color combinations */
+#color-Bant + .color-btn,
+#desktop-Bant {
+  background: linear-gradient(
+    135deg,
+    #f0f0f0,
+    #1e90ff,
+    #228b22
+  ); /* White, Blue, and Green */
+  color: #121212; /* Dark text */
+}
+
+#color-Naya + .color-btn,
+#desktop-Naya {
+  background: linear-gradient(
+    135deg,
+    #ff4500,
+    #228b22,
+    #f0f0f0
+  ); /* Red, Green, and White */
+  color: #121212; /* Dark text */
+}
+
+#color-Grixis + .color-btn,
+#desktop-Grixis {
+  background: linear-gradient(
+    135deg,
+    #121212,
+    #1e90ff,
+    #ff4500
+  ); /* Black, Blue, and Red */
+  color: #ffffff; /* White text */
+}
+
+#color-Jeskai + .color-btn,
+#desktop-Jeskai {
+  background: linear-gradient(
+    135deg,
+    #ff4500,
+    #f0f0f0,
+    #1e90ff
+  ); /* Red, White, and Blue */
+  color: #121212; /* Dark text */
+}
+
+#color-Temur + .color-btn,
+#desktop-Temur {
+  background: linear-gradient(
+    135deg,
+    #1e90ff,
+    #ff4500,
+    #228b22
+  ); /* Blue, Red, and Green */
+  color: #ffffff; /* White text */
 }

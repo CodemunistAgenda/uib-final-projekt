@@ -5,156 +5,427 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MTG Noob Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="desktop.js"></script>
 </head>
 
 <body>
     <header></header>
     <main>
         <div class="mainpage">
+
             <div id="logocircle">
-                <a class="linkedimg" href="#">
+                <input type="checkbox" id="toggle" class="toggle-checkbox">
+                <label for="toggle" class="toggle-label">☰ Let the journey begin</label>
+
+                <a class="linkedimg" href="#green-section">
                     <img class="monogreen" src="/assets/Monogreen.webp" alt="">
                 </a>
-                <a class="linkedimg" href="#">
+                <a class="linkedimg" href="#blue-section">
                     <img class="monoblue" src="/assets/Monoblue.webp" alt="">
                 </a>
-                <a class="linkedimg" href="#text-container-black">
+                <a class="linkedimg" href="#black-section">
                     <img class="monoblack" src="/assets/monoblack.png" alt="">
                 </a>
-                <a class="linkedimg" href="#">
+                <a class="linkedimg" href="#red-section">
                     <img class="monored" src="/assets/monored.webp" alt="">
                 </a>
-                <a class="linkedimg" href="#">
+                <a class="linkedimg" href="#white-section">
                     <img class="monowhite" src="/assets/monowhite.webp" alt="">
                 </a>
-                <a class="linkedimg" href="#">
+                <a class="linkedimg" href="#colorless-section">
                     <img class="colorless" src="/assets/Colorless.webp" alt="">
                 </a>
                 <div class="circle"><img class="mtglogo" src="/assets/MTG Logo.png" alt=""></div>
             </div>
         </div>
-        <div id="text-container-black">
-            <div id="button-container">
-                <a href="#Monoblack">Monoblack</a>
-                <a href="#Dimir">Dimir</a>
-                <a href="#Golgari">Golgari</a>
-                <a href="#Orzhov">Orzhov</a>
-                <a href="#Rakdos">Rakdos</a>
-                <a href="#Abzan">Abzan</a>
-                <a href="#Esper">Esper</a>
-                <a href="#Grixis">Grixis</a>
-                <a href="#Jund">Jund</a>
-                <a href="#Mardu">Mardu</a>
-                <a href="#Sultai">Sultai</a>
-            </div>
-
-            <!-- Text Sections -->
-            <div id="text-display">
-                <div id="Monoblack" class="text-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sequi, quo ipsa quam non dignissimos in sed dolor ut ipsam?</div>
-                <div id="Dimir" class="text-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.</div>
-                <div id="Golgari" class="text-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.</div>
-                <div id="Orzhov" class="text-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.</div>
-                <div id="Rakdos" class="text-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.</div>
-                <div id="Abzan" class="text-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.</div>
-                <div id="Esper" class="text-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.</div>
-                <div id="Grixis" class="text-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.</div>
-                <div id="Jund" class="text-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.</div>
-                <div id="Mardu" class="text-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.</div>
-                <div id="Sultai" class="text-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.</div>
+        <!-- Desktop Color Identity Section (only visible on desktop) -->
+        <div id="desktop-color-section" class="desktop-only">
+            <div class="desktop-container">
+                <ul class="color-identity-list">
+                    <!-- Mono-Color Identities -->
+                    <li>
+                        <input type="checkbox" id="color-Monoblack" class="color-checkbox">
+                        <label for="color-Monoblack" class="color-btn">Monoblack</label>
+                        <div class="desktop-text-content" id="desktop-Monoblack">
+                            <h2>Monoblack</h2>
+                            <p>Monoblack focuses on ambition, power, and ruthless tactics.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="color-Monogreen" class="color-checkbox">
+                        <label for="color-Monogreen" class="color-btn">Monogreen</label>
+                        <div class="desktop-text-content" id="desktop-Monogreen">
+                            <h2>Monogreen</h2>
+                            <p>Monogreen celebrates nature, growth, and balance with the world.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="color-Monoblue" class="color-checkbox">
+                        <label for="color-Monoblue" class="color-btn">Monoblue</label>
+                        <div class="desktop-text-content" id="desktop-Monoblue">
+                            <h2>Monoblue</h2>
+                            <p>Monoblue values knowledge, technology, and control.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="color-Monored" class="color-checkbox">
+                        <label for="color-Monored" class="color-btn">Monored</label>
+                        <div class="desktop-text-content" id="desktop-Monored">
+                            <h2>Monored</h2>
+                            <p>Monored is driven by passion, freedom, and destructive power.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="color-Monowhite" class="color-checkbox">
+                        <label for="color-Monowhite" class="color-btn">Monowhite</label>
+                        <div class="desktop-text-content" id="desktop-Monowhite">
+                            <h2>Monowhite</h2>
+                            <p>Monowhite embodies order, peace, and protection of the community.</p>
+                        </div>
+                    </li>
+    
+                    <!-- Two-Color Identities -->
+                    <li>
+                        <input type="checkbox" id="color-Dimir" class="color-checkbox">
+                        <label for="color-Dimir" class="color-btn">Dimir (Blue/Black)</label>
+                        <div class="desktop-text-content" id="desktop-Dimir">
+                            <h2>Dimir</h2>
+                            <p>Dimir is all about espionage, secrecy, and manipulation.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="color-Golgari" class="color-checkbox">
+                        <label for="color-Golgari" class="color-btn">Golgari (Black/Green)</label>
+                        <div class="desktop-text-content" id="desktop-Golgari">
+                            <h2>Golgari</h2>
+                            <p>The Golgari Swarm values life and death equally, thriving on decay.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="color-Orzhov" class="color-checkbox">
+                        <label for="color-Orzhov" class="color-btn">Orzhov (Black/White)</label>
+                        <div class="desktop-text-content" id="desktop-Orzhov">
+                            <h2>Orzhov</h2>
+                            <p>Orzhov Syndicate combines power, religion, and corruption.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="color-Rakdos" class="color-checkbox">
+                        <label for="color-Rakdos" class="color-btn">Rakdos (Black/Red)</label>
+                        <div class="desktop-text-content" id="desktop-Rakdos">
+                            <h2>Rakdos</h2>
+                            <p>Rakdos is wild, chaotic, and enjoys reveling in destruction.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="color-Selesnya" class="color-checkbox">
+                        <label for="color-Selesnya" class="color-btn">Selesnya (Green/White)</label>
+                        <div class="desktop-text-content" id="desktop-Selesnya">
+                            <h2>Selesnya</h2>
+                            <p>The Selesnya Conclave believes in unity with nature and peaceful coexistence.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="color-Simic" class="color-checkbox">
+                        <label for="color-Simic" class="color-btn">Simic (Green/Blue)</label>
+                        <div class="desktop-text-content" id="desktop-Simic">
+                            <h2>Simic</h2>
+                            <p>The Simic Combine focuses on evolution and biological improvement.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="color-Gruul" class="color-checkbox">
+                        <label for="color-Gruul" class="color-btn">Gruul (Red/Green)</label>
+                        <div class="desktop-text-content" id="desktop-Gruul">
+                            <h2>Gruul</h2>
+                            <p>The Gruul Clans believe in primal strength and the destruction of civilization.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="color-Azorius" class="color-checkbox">
+                        <label for="color-Azorius" class="color-btn">Azorius (White/Blue)</label>
+                        <div class="desktop-text-content" id="desktop-Azorius">
+                            <h2>Azorius</h2>
+                            <p>Azorius Senate seeks order and law above all else.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="color-Izzet" class="color-checkbox">
+                        <label for="color-Izzet" class="color-btn">Izzet (Blue/Red)</label>
+                        <div class="desktop-text-content" id="desktop-Izzet">
+                            <h2>Izzet</h2>
+                            <p>The Izzet League thrives on experimentation and innovation.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="color-Boros" class="color-checkbox">
+                        <label for="color-Boros" class="color-btn">Boros (Red/White)</label>
+                        <div class="desktop-text-content" id="desktop-Boros">
+                            <h2>Boros</h2>
+                            <p>The Boros Legion believes in righteous warfare and military might.</p>
+                        </div>
+                    </li>
+    
+                    <!-- Three-Color Identities -->
+                    <li>
+                        <input type="checkbox" id="color-Abzan" class="color-checkbox">
+                        <label for="color-Abzan" class="color-btn">Abzan (Black/Green/White)</label>
+                        <div class="desktop-text-content" id="desktop-Abzan">
+                            <h2>Abzan</h2>
+                            <p>Abzan believes in endurance, unity, and using strength in harmony with others.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="color-Esper" class="color-checkbox">
+                        <label for="color-Esper" class="color-btn">Esper (White/Blue/Black)</label>
+                        <div class="desktop-text-content" id="desktop-Esper">
+                            <h2>Esper</h2>
+                            <p>Esper mages use advanced technology and magic to pursue perfection and order.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="color-Jund" class="color-checkbox">
+                        <label for="color-Jund" class="color-btn">Jund (Black/Red/Green)</label>
+                        <div class="desktop-text-content" id="desktop-Jund">
+                            <h2>Jund</h2>
+                            <p>Jund focuses on natural chaos and survival of the fittest.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="color-Mardu" class="color-checkbox">
+                        <label for="color-Mardu" class="color-btn">Mardu (Red/White/Black)</label>
+                        <div class="desktop-text-content" id="desktop-Mardu">
+                            <h2>Mardu</h2>
+                            <p>Mardu warriors prioritize speed and attack in battle.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="color-Sultai" class="color-checkbox">
+                        <label for="color-Sultai" class="color-btn">Sultai (Black/Blue/Green)</label>
+                        <div class="desktop-text-content" id="desktop-Sultai">
+                            <h2>Sultai</h2>
+                            <p>Sultai prioritizes power through ruthlessness and a strong bond with nature.</p>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
+
+        <!-- Black Section -->
+        <section id="black-section">
+            <div id="button-container">
+                <a href="#Monoblack" class="btn monoblack-btn">Monoblack</a>
+                <a href="#Dimir" class="btn dimir-btn">Dimir</a>
+                <a href="#Golgari" class="btn golgari-btn">Golgari</a>
+                <a href="#Orzhov" class="btn orzhov-btn">Orzhov</a>
+                <a href="#Rakdos" class="btn rakdos-btn">Rakdos</a>
+                <a href="#Abzan" class="btn abzan-btn">Abzan</a>
+            </div>
+            <div id="text-display">
+                <div id="Monoblack" class="text-content black-bg">
+                    <h2>Monoblack</h2>
+                    <p>Monoblack focuses on ambition, power, and ruthless tactics.</p>
+                </div>
+                <div id="Dimir" class="text-content dimir-bg">
+                    <h2>Dimir</h2>
+                    <p>Dimir is all about espionage, secrecy, and manipulation.</p>
+                </div>
+                <div id="Golgari" class="text-content golgari-bg">
+                    <h2>Golgari</h2>
+                    <p>The Golgari Swarm values life and death equally, thriving on decay.</p>
+                </div>
+                <div id="Orzhov" class="text-content orzhov-bg">
+                    <h2>Orzhov</h2>
+                    <p>Orzhov Syndicate combines power, religion, and corruption.</p>
+                </div>
+                <div id="Rakdos" class="text-content rakdos-bg">
+                    <h2>Rakdos</h2>
+                    <p>Rakdos is wild, chaotic, and enjoys reveling in destruction.</p>
+                </div>
+                <div id="Abzan" class="text-content abzan-bg">
+                    <h2>Abzan</h2>
+                    <p>Abzan believes in endurance, unity, and using strength in harmony with others.</p>
+                </div>
+            </div>
+            <a href="#" class="back-to-top"><img src="/assets/MTG Logo.png" alt="Back to top"></a>
+        </section>
+
+        <!-- Green Section -->
+        <section id="green-section">
+            <div id="button-container">
+                <a href="#Monogreen" class="btn monogreen-btn">Monogreen</a>
+                <a href="#Selesnya" class="btn selesnya-btn">Selesnya</a>
+                <a href="#Simic" class="btn simic-btn">Simic</a>
+                <a href="#Gruul" class="btn gruul-btn">Gruul</a>
+                <a href="#Golgari" class="btn golgari-btn">Golgari</a>
+                <a href="#Abzan" class="btn abzan-btn">Abzan</a>
+            </div>
+            <div id="text-display">
+                <div id="Monogreen" class="text-content green-bg">
+                    <h2>Monogreen</h2>
+                    <p>Monogreen celebrates nature, growth, and balance with the world.</p>
+                </div>
+                <div id="Selesnya" class="text-content selesnya-bg">
+                    <h2>Selesnya</h2>
+                    <p>The Selesnya Conclave believes in unity with nature and peaceful coexistence.</p>
+                </div>
+                <div id="Simic" class="text-content simic-bg">
+                    <h2>Simic</h2>
+                    <p>The Simic Combine focuses on evolution and biological improvement.</p>
+                </div>
+                <div id="Gruul" class="text-content gruul-bg">
+                    <h2>Gruul</h2>
+                    <p>The Gruul Clans believe in primal strength and the destruction of civilization.</p>
+                </div>
+            </div>
+            <a href="#" class="back-to-top"><img src="/assets/MTG Logo.png" alt="Back to top"></a>
+        </section>
+
+        <!-- Blue Section -->
+        <section id="blue-section">
+            <div id="button-container">
+                <a href="#Monoblue" class="btn monoblue-btn">Monoblue</a>
+                <a href="#Azorius" class="btn azorius-btn">Azorius</a>
+                <a href="#Dimir" class="btn dimir-btn">Dimir</a>
+                <a href="#Simic" class="btn simic-btn">Simic</a>
+                <a href="#Izzet" class="btn izzet-btn">Izzet</a>
+                <a href="#Esper" class="btn esper-btn">Esper</a>
+            </div>
+            <div id="text-display">
+                <div id="Monoblue" class="text-content blue-bg">
+                    <h2>Monoblue</h2>
+                    <p>Monoblue values knowledge, technology, and control.</p>
+                </div>
+                <div id="Azorius" class="text-content azorius-bg">
+                    <h2>Azorius</h2>
+                    <p>Azorius Senate seeks order and law above all else.</p>
+                </div>
+                <div id="Izzet" class="text-content izzet-bg">
+                    <h2>Izzet</h2>
+                    <p>The Izzet League thrives on experimentation and innovation.</p>
+                </div>
+            </div>
+            <a href="#" class="back-to-top"><img src="/assets/MTG Logo.png" alt="Back to top"></a>
+        </section>
+
+        <!-- Red Section -->
+        <section id="red-section">
+            <div id="button-container">
+                <a href="#Monored" class="btn monored-btn">Monored</a>
+                <a href="#Gruul" class="btn gruul-btn">Gruul</a>
+                <a href="#Izzet" class="btn izzet-btn">Izzet</a>
+                <a href="#Rakdos" class="btn rakdos-btn">Rakdos</a>
+                <a href="#Boros" class="btn boros-btn">Boros</a>
+            </div>
+            <div id="text-display">
+                <div id="Monored" class="text-content red-bg">
+                    <h2>Monored</h2>
+                    <p>Monored is driven by passion, freedom, and destructive power.</p>
+                </div>
+                <div id="Boros" class="text-content boros-bg">
+                    <h2>Boros</h2>
+                    <p>The Boros Legion believes in righteous warfare and military might.</p>
+                </div>
+                <div id="Rakdos" class="text-content rakdos-bg">
+                    <h2>Rakdos</h2>
+                    <p>The Rakdos revel in chaos and destruction, enjoying mayhem for fun.</p>
+                </div>
+            </div>
+            <a href="#" class="back-to-top"><img src="/assets/MTG Logo.png" alt="Back to top"></a>
+        </section>
+
+        <!-- White Section -->
+        <section id="white-section">
+            <div id="button-container">
+                <a href="#Monowhite" class="btn monowhite-btn">Monowhite</a>
+                <a href="#Selesnya" class="btn selesnya-btn">Selesnya</a>
+                <a href="#Azorius" class="btn azorius-btn">Azorius</a>
+                <a href="#Boros" class="btn boros-btn">Boros</a>
+                <a href="#Orzhov" class="btn orzhov-btn">Orzhov</a>
+            </div>
+            <div id="text-display">
+                <div id="Monowhite" class="text-content white-bg">
+                    <h2>Monowhite</h2>
+                    <p>Monowhite embodies order, peace, and protection of the community.</p>
+                </div>
+                <div id="Azorius" class="text-content azorius-bg">
+                    <h2>Azorius</h2>
+                    <p>Azorius Senate values control, law, and ensuring justice is served.</p>
+                </div>
+                <div id="Orzhov" class="text-content orzhov-bg">
+                    <h2>Orzhov</h2>
+                    <p>The Orzhov Syndicate uses religion and wealth to maintain control.</p>
+                </div>
+            </div>
+            <a href="#" class="back-to-top"><img src="/assets/MTG Logo.png" alt="Back to top"></a>
+        </section>
+
+        <!-- Colorless Section -->
+        <section id="colorless-section">
+            <div id="button-container">
+                <a href="#Colorless" class="btn colorless-btn">Colorless</a>
+            </div>
+            <div id="text-display">
+                <div id="Colorless" class="text-content colorless-bg">
+                    <h2>Colorless</h2>
+                    <p>
+                        Colorless entities in Magic: The Gathering, such as Eldrazi and artifacts, are outside of the
+                        traditional
+                        color wheel. These beings are often ancient, powerful, and neutral in their affiliations.
+                        Artifacts
+                        represent technology and magical objects, while Eldrazi are mysterious and consume entire
+                        planes.
+                    </p>
+                </div>
+            </div>
+            <a href="#" class="back-to-top"><img src="/assets/MTG Logo.png" alt="Back to top"></a>
+        </section>
+        <!-- Format section  -->
+        <!-- Play Formats Section -->
+        <section id="formats-section">
+            <div id="button-container">
+                <a href="#Standard" class="btn standard-btn">Standard</a>
+                <a href="#Modern" class="btn modern-btn">Modern</a>
+                <a href="#Commander" class="btn commander-btn">Commander</a>
+                <a href="#Pioneer" class="btn pioneer-btn">Pioneer</a>
+                <a href="#Legacy" class="btn legacy-btn">Legacy</a>
+            </div>
+
+            <div id="text-display">
+                <div id="Standard" class="text-content standard-bg">
+                    <h2>Standard</h2>
+                    <p>Standard is a dynamic format where players build decks using cards from the most recent Magic:
+                        The Gathering sets.</p>
+                </div>
+                <div id="Modern" class="text-content modern-bg">
+                    <h2>Modern</h2>
+                    <p>Modern is a format where players can use cards from core sets and expansions going back to 8th
+                        Edition.</p>
+                </div>
+                <div id="Commander" class="text-content commander-bg">
+                    <h2>Commander</h2>
+                    <p>Commander is a multiplayer-focused format where players build decks around a legendary creature,
+                        known as the Commander.</p>
+                </div>
+                <div id="Pioneer" class="text-content pioneer-bg">
+                    <h2>Pioneer</h2>
+                    <p>Pioneer is a relatively new format that allows cards from sets as far back as Return to Ravnica.
+                    </p>
+                </div>
+                <div id="Legacy" class="text-content legacy-bg">
+                    <h2>Legacy</h2>
+                    <p>Legacy is an eternal format where cards from almost all Magic sets are legal, but it has a
+                        restricted ban list.</p>
+                </div>
+            </div>
+            <a href="#" class="back-to-top"><img src="/assets/MTG Logo.png" alt="Back to top"></a>
+        </section>
     </main>
+
     <footer></footer>
 </body>
 
